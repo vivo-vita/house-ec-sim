@@ -23,51 +23,56 @@
     <div class="container-fluid">
       <progress style="width: 100%" id="progress" max="0" value="0"></progress>
       <div class="row">
-      <div class="col-12" style="margin-bottom: 2em;">
-        <h1>House &amp; EC simulation</h1>
-        <h4>A simulation of the Huntington-Hill method used for aportioning house seats, as explained in <a href="https://www.youtube.com/watch?v=6JN4RI7nkes" target="_blank">this video</a>.</h4>
-      </div>
-
-      <div class="col-12 col-md-5 order-2 order-md-1">
-        <table class="table">
-          <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Name</th>
-            <th scope="col">Seats</th>
-            <th scope="col">EC Votes</th>
-          </tr>
-          </thead>
-          <tbody id="table">
-          </tbody>
-        </table>
-      </div>
-
-      <div class="col-12 col-md-7 order-1 order-md-2">
-        <div class="card" style="margin-bottom: 2em;">
-          <div class="card-body">
-            <h5 class="card-title">Parameters</h5>
-            <div class="form-group">
-              <label for="seats_input">Number of seats</label>
-              <input type="number" class="form-control" id="seats_input" value="435">
-            </div>
-
-            <div class="form-group">
-              <label for="sim_time_input">Simulation step time (ms)</label>
-              <input type="number" class="form-control" id="sim_time_input" value="200">
-            </div>
-
-            <button type="button" class="btn btn-primary large-btn" onclick="run()">Run calculation</button>
-            <button type="button" class="btn btn-secondary large-btn" onclick="abortAndReset();">Reset</button>
-            <button id="enableLock" type="button" class="btn btn-success large-btn" onclick="enableLock();">Chart: Y-Axis Unlocked</button>
-            <button id="disableLock" type="button" class="btn btn-danger large-btn" style="display: none;" onclick="disableLock();">Chart: Y-Axis Locked</button>
-
-          </div>
+        <div class="col-12" style="margin-bottom: 2em;">
+          <h1>House &amp; EC simulation</h1>
+          <h4>A simulation of the Huntington-Hill method used for aportioning house seats, as explained in <a href="https://www.youtube.com/watch?v=6JN4RI7nkes" target="_blank">this video</a>.</h4>
         </div>
 
-        <canvas id="chart"></canvas>
+        <div class="col-12 col-md-5 order-2 order-md-1">
+          <table class="table">
+            <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Seats</th>
+              <th scope="col">EC Votes</th>
+            </tr>
+            </thead>
+            <tbody id="table">
+            </tbody>
+          </table>
+        </div>
+
+        <div class="col-12 col-md-7 order-1 order-md-2">
+          <div class="card" style="margin-bottom: 2em;">
+            <div class="card-body">
+              <h5 class="card-title">Parameters</h5>
+              <div class="form-group">
+                <label for="seats_input">Number of seats</label>
+                <input type="number" class="form-control" id="seats_input" value="435">
+              </div>
+
+              <div class="form-group">
+                <label for="sim_time_input">Simulation step time (ms)</label>
+                <input type="number" class="form-control" id="sim_time_input" value="200">
+              </div>
+
+              <button type="button" class="btn btn-primary large-btn" onclick="run()">Run calculation</button>
+              <button type="button" class="btn btn-secondary large-btn" onclick="abortAndReset();">Reset</button>
+              <button id="enableLock" type="button" class="btn btn-success large-btn" onclick="enableLock();">Chart: Y-Axis Unlocked</button>
+              <button id="disableLock" type="button" class="btn btn-danger large-btn" style="display: none;" onclick="disableLock();">Chart: Y-Axis Locked</button>
+
+            </div>
+          </div>
+
+          <canvas id="chart"></canvas>
+        </div>
+
+        <div class="col-12 order-3" style="margin-top: 3em; margin-bottom: 3em;">
+          <h2 class="text-center"><a href="https://github.com/vivo-vita/vivo-vita.github.io/blob/master/script.js" target="_blank">SOURCE</a></h2>
+        </div>
+
       </div>
-    </div>
     </div>
   </body>
 </html>
